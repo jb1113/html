@@ -187,4 +187,31 @@
         [빈 요소](https://developer.mozilla.org/ko/docs/Glossary/Empty_element)
 
     - 공백
+
+        ### HTML에서의 공백(space)
+
+        기본적으로 HTML은 두 칸 이상의 공백을 모두 무시합니다.
+
+        ```html
+        <h1>Hello, HTML</h1>
+        <h1>Hello,     HTML</h1>
+        <h1>
+		Hello, 
+		HTML
+        </h1>
+        ```
+
+        HTML은 두 칸 이상의 공백과 개행을 모두 무시하기 때문에 위 세가지 모두 같은 텍스트가 화면에 나타나게 됩니다.
+
+        ### 생각해보기
+
+        이러한 공백처리 방식에 대해서 CSS로 제어할 수 있습니다.
+        뒤에 단어 관련 속성 강의에서 다룰 속성이지만, 어떤 속성으로 공백을 제어할 수 있는지 한번 확인해 보세요.
+
+        ---
+
+        ### 참고 링크
+
+        [How to Change Default Text Wrapping with HTML and CSS - Hongkiat](https://www.hongkiat.com/blog/change-default-text-wrapping-html-css/)
+
     - 주석
