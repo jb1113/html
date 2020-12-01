@@ -236,3 +236,51 @@
         ### 참고자료
 
         [HTML comment tag](https://www.w3schools.com/tags/tag_comment.asp)
+
+- HTML 문서 구조
+
+    ### HTML의 기본 구조
+
+    HTML의 기본 구조는 웹 문서를 작성할 때 반드시 들어가야 하는 기본적인 내용으로 크게는 문서 타입 정의와 <html>요소로 구분합니다.
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML 문서의 기본 구조</title>
+	</head>
+	<body>
+		<h1>Hello, HTML</h1>
+	</body>
+    </html>
+    ```
+
+    ### 문서 타입 정의
+
+    문서 타입 정의는 보통 DTD(doctype)라고 부릅니다.
+    이 문서가 어떤 버전으로 작성되었는지 브라우저에게 알려주는 선언문이며 반드시 문서 내 최상단에 선언되어야 합니다.
+
+    ### <html>요소
+
+    문서 타입 선언 후에는 <html> 태그가 나와야 하고, 자식으로는 <head> 태그와 <body> 태그가 있습니다.
+    <html> 태그의 lang 속성은 문서가 어느 언어로 작성되었는지를 의미합니다.
+    <head> 태그 내의 위치하는 태그들은 브라우저 화면에 표시되지 않습니다.
+    대신 문서의 기본 정보 설정이나 외부 스타일 시트 파일 및 js 파일을 연결하는 등의 역할을 합니다.
+    <meta> 태그의 charset 속성은 문자의 인코딩 방식을 지정합니다.
+    <body> 태그에는 실제 브라우저 화면에 나타나는 내용이 들어가며, 앞으로 우리가 다루는 태그들 대부분이 모두 여기에 해당이 됩니다.
+    위 코드는 가장 기본적인 문서 구조로, 보통은 이보다 더 많은 태그가 들어가게 됩니다.
+
+    ---
+
+    ### 참고자료
+
+    [HTML doctype declaration](https://www.w3schools.com/tags/tag_doctype.asp)
+
+    [HTML html tag](https://www.w3schools.com/tags/tag_html.asp)
+
+    [HTML head tag](https://www.w3schools.com/tags/tag_head.asp)
+
+    [HTML body tag](https://www.w3schools.com/tags/tag_body.asp)
+
+    [HTML meta tag](https://www.w3schools.com/tags/tag_meta.asp)
