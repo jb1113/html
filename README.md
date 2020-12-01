@@ -1,7 +1,3 @@
-# HTML
-
-### The language for building web pages
-
 # HTML 이해하기
 
 - HTML 소개
@@ -80,6 +76,51 @@
         [HTML 요소 참고서](https://developer.mozilla.org/ko/docs/Web/HTML/Element)
 
     - 속성
+
+        ### 속성이란?
+
+        속성은 태그에 추가로 정보를 제공하거나 태그의 동작이나 표현을 제어할 수 있는 설정값을 의미합니다.
+
+        ### 속성을 사용하는 방법
+
+        속성은 이름과 값으로 이루어져 있습니다.
+        시작 태그에서 태그 이름 뒤에 공백으로 구분 후 속성 이름="속성값"으로 표현합니다.
+        속성값은 홑따옴표(')와 쌍따옴표(")로 감싸 표현합니다.
+
+        ```html
+        <h1 id="title">Hello, HTML</h1>
+        ```
+
+        위는 `<h1>`에 id 속성을 추가해 title 값을 선언한 코드입니다.
+
+        ### 여러 속성을 사용하는 방법
+
+        의미와 용도에 따라 여러 속성이 존재하며 하나의 태그에 여러 속성을 선언할 수 있습니다.
+        여러 속성을 선언할 때는 공백으로 구분해서 사용합니다.
+
+        ```html
+        <h1 id="title" class="main">Hello, HTML</h1>
+        ```
+
+        위는 `<h1>`에 id와 class 2개의 속성을 선언한 코드입니다.
+        속성의 선언 순서는 태그에 영향을 미치지 않으며 class를 id보다 먼저 선언해도 결과는 같습니다.
+
+        ### 속성의 종류
+
+        속성은 종류에 따라 모든 태그에 사용할 수 있는 글로벌 속성과 특정 태그에서만 사용할 수 있는 속성으로 구분됩니다.
+        또한, 선택적으로 쓸 수 있는 속성과 특정 태그에서 필요한 필수 속성으로 구분됩니다.
+        위의 예시에서 쓰인 id와 class 속성은 글로벌 속성입니다.
+
+        ---
+
+        ### 참고자료
+
+        [HTML 특성 참고서](https://developer.mozilla.org/ko/docs/Web/HTML/Attributes)
+
+        [HTML Global attributes](https://www.w3schools.com/tags/ref_standardattributes.asp)
+
+        [HTML Attributes](https://www.w3schools.com/tags/ref_attributes.asp)
+
     - 태그의 중첩
     - 빈 태그
     - 공백
