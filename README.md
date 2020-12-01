@@ -210,8 +210,29 @@
 
         ---
 
-        ### 참고 링크
+        ### 참고자료
 
         [How to Change Default Text Wrapping with HTML and CSS - Hongkiat](https://www.hongkiat.com/blog/change-default-text-wrapping-html-css/)
 
     - 주석
+
+        ### HTML에서의 주석(comment)
+
+        주석은 화면에 노출되지 않고 메모의 목적으로만 사용하는 것을 의미합니다.
+        HTML 파일 내에 주석으로 표시를 해주면 브라우저는 해당 부분을 인식하여 해석하지 않습니다.
+
+        ```html
+        <!-- 이곳에 작성되는 내용들은 모두 주석 처리가 됩니다. -->
+        <!-- 주석은 여러 줄로도 작성할 수 있습니다.
+		<h1>Hello, HTML</h1>
+		위 <h1>태그는 브라우저가 해석하지 않습니다.
+        -->
+        ```
+
+        주석의 시작은 <!— 로 시작하고, —> 표시로 종료합니다.
+
+        ---
+
+        ### 참고자료
+
+        [HTML comment tag](https://www.w3schools.com/tags/tag_comment.asp)
