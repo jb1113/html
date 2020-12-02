@@ -82,3 +82,32 @@
     [: The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 
     [: The Line Break element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br)
+
+- 텍스트를 꾸며주는 요소
+
+    ### 텍스트 표현 태그
+
+    웹 표준화가 대두하면서 웹 문서의 구조와 표현을 분리하였습니다.
+    그 과정에서 많은 표현용 태그들이 사라졌고, 지금은 표현용 태그가 얼마 남지 않았습니다.
+    그 중 `<b>`, `<i>`, `<u>`, `<s>`에 대해 살펴보도록 하겠습니다.
+
+    - `<b>` : bold 태그는 글자를 굵게 표현하는 태그입니다.
+    - `<i>` : 이전에는 italic 태그로 글자를 기울여서 표현하는 태그였으나,
+    HTML5 버전에서는 `<i>` 태그가 단순 표현용 태그에서 의미를 가지는 태그로 변경 되었습니다. 특정 이유(기술적인 용어, 외국어 문구, 소설속 인물의 생각 등)로 다른 글자와 구분하기 위해 사용됩니다.
+    - `<u>` : underline 태그는 글자의 밑줄을 표현하는 태그입니다.
+    - `<s>` : strike 태그는 글자의 중간선을 표현하는 태그입니다. (예전에 존재했던 strike 태그와는 다른 태그로, strike 태그는 폐기되어 더는 사용할 수 없습니다.)
+
+    위 태그들은 의미가 없는 표현용 태그이기 때문에 사용하실 때는 각별히 주의를 하셔야 합니다.
+
+    ```html
+    <p>
+	<b>Lorem</b> <i>ipsum</i> dolor sit amet<br>
+	<u>Lorem</u> <s>ipsum</s> dolor sit amet
+    </p>
+    ```
+
+    ---
+
+    ### 참고자료
+
+    [HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics)
