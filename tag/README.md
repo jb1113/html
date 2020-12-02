@@ -18,7 +18,7 @@
 
     [HTML5 Element Index](http://html5doctor.com/element-index/)
 
-- 제목과 단락요소
+- 제목과 단락 요소
 
     ### 제목 태그
 
@@ -203,3 +203,40 @@
     ### 참고링크
 
     [](https://developer.mozilla.org/ko/docs/Web/HTML/Element/a)
+
+- 의미가 없는 컨테이너 요소
+
+    ### 의미없이 요소를 묶기 위한 태그(container)
+
+    태그 자체에 아무 의미가 없으며, 단순히 요소들을 묶기 위해 사용되는 태그입니다.
+    스타일을 주거나 서버에 보내는 데이터를 담기 위한 용도로 이런 의미 없는 요소들이 사용됩니다.
+    이런 의미 없는 태그의 사용 빈도는 매우 높습니다.
+    그 이유는 html 태그들은 문서를 웹에 나타내기 위해 제작되어 기본적으로 문서에 최적화 되어있는 의미를 지니는데, 현재 웹의 형태는 문서 형태에서 많이 벗어났기 때문입니다.
+    다행히 HTML 버전이 업그레이드 되면서 웹에 알맞은 태그들이 많이 생겼습니다.
+    가장 대표적으로 많이 쓰이는 의미가 없는 태그는 `<div>`, `<span>`입니다.
+
+    ### `<div>`태그와 `<span>`태그
+
+    div(division) 태그는 블록 레벨 태그입니다.
+    블록 레벨 요소는 기본적으로 한 줄을 생성해서 내용을 표현합니다.
+    반면, span 태그는 인라인 레벨 태그입니다.
+    인라인 레벨 요소들은 블록 레벨 요소의 한 줄 안에서 표현되는 요소들입니다.
+
+    이전에 배운 `<p>` 태그는 블록 레벨 태그이며,
+    그 안에서 텍스트를 꾸며주는 `<b>`, `<i>`, `<u>`, `<s>`는 모두 인라인 레벨 태그입니다.
+
+    ```html
+    <div>
+    	<span>Lorem</span> ipsum dolor sit.
+    </div>
+    ```
+
+    `<div>`, `<span>`은 모두 아무 의미가 없으므로 실제 브라우저도 별다른 스타일을 적용하지 않습니다.
+
+    ---
+
+    ### 참고자료
+
+    [: The Content Division element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+
+    [](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
