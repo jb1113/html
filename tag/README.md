@@ -151,3 +151,55 @@
     [Semantics](https://developer.mozilla.org/ko/docs/Glossary/Semantics)
 
     [HTML Semantic Elements](https://www.w3schools.com/htmL/html5_semantic_elements.asp)
+
+- 앵커 요소
+
+    ### 앵커(anchor) 태그
+
+    HTML에서 HT(Hyper Text)는 링크를 의미하는 것으로, 링크는 클릭하기만 하면 다른 페이지로 쉽게 이동을 할 수 있습니다.
+    앵커 태그는 이런 링크를 생성합니다.
+    앵커 태그를 이용해 다른 페이지로 이동하거나 현재 페이지 내에서 특정 위치로 초점을 이동시킬 수 있습니다.
+    HTML의 가장 큰 특징이 되는 태그이며, 그만큼 중요하고 자주 사용되는 태그입니다.
+
+    <a>(anchor 태그)는 a태그, 앵커, 링크 등 여러 이름으로 불립니다.
+
+    ```html
+    <a href="http://www.google.com/" target="_blank">구글</a>
+    ```
+
+    ### href 속성
+
+    링크를 만들기 위해 <a> 태그는 반드시 href(hypertext reference) 속성을 가지고 있어야 합니다.
+    href 속성의 값은 링크의 목적지가 되는 URL 입니다.
+
+    ### target 속성
+
+    target 속성은 링크된 리소스를 어디에 표시할지를 나타내는 속성입니다.
+    속성값으로는 _self, _blank, _parent, _top이 있습니다.
+    _self는 현재 화면에 표시한다는 의미로, target 속성이 선언되지 않으면 기본적으로 self와 같이 동작합니다.
+    _blank는 새로운 창에 표시한다는 의미로 외부 페이지가 나타나게끔 하는 속성입니다.
+    _parent와 _top은 프레임이라는 특정 조건에서만 동작하는 속성으로,
+    최근에는 프레임을 잘 쓰지 않기 때문에 따로 다루지 않고 넘어가겠습니다.
+
+    ### 내부링크
+
+    <a> 태그를 통해 만들어진 링크가 꼭 외부 페이지로만 이동하는 것은 아닙니다.
+    <a> 태그를 통해 페이지 내부의 특정 요소로 초점을 이동할 수도 있는데, 이를 내부 링크라고 합니다.
+    내부 링크를 사용할 때는 href 속성값에 #(해시태그)를 쓰고 그 뒤에 페이지 내에서 이동하고자 하는 요소의 id 속성값을 적으면 됩니다.
+
+    ```html
+    <h1 id="overview">개요</h1>
+
+    ... 중략
+
+    <a href="#overview">맨위로</a>
+    ```
+
+    보통 페이지에 내용이 많아 스크롤이 길어질 경우, 빠르게 화면 최상단으로 이동하고자 할 때 내부 링크를 주로 사용합니다.
+    웹페이지에서 화면 하단에 있는 'top'또는 '맨 위로 이동하기' 버튼이 이에 해당합니다.
+
+    ---
+
+    ### 참고링크
+
+    [](https://developer.mozilla.org/ko/docs/Web/HTML/Element/a)
