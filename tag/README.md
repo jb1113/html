@@ -372,7 +372,7 @@
 
     ---
 
-    ### 참고링크
+    ### 참고자료
 
     [: 이미지 삽입 요소](https://developer.mozilla.org/ko/docs/Web/HTML/Element/img)
 
@@ -523,24 +523,75 @@
 
     ---
 
-    ### 참고링크
+    ### 참고자료
 
     [: The Table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
-    [: The Table Row element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr)
+    [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan)
 
-    [: The Table Data Cell element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td)
+    [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan)
 
-    [](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th)
+- 폼 요소
 
-    [: The Table Caption element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
+    웹 사이트에는 사용자의 입력을 요구하는 때도 있습니다.
+    예를 들어 사용자로부터 텍스트를 입력받거나 아니면 선택을 하게끔 하는 경우가 이에 해당합니다.
+    사용자로부터 데이터를 받아야 하는 경우 사용되는 요소들을 폼 요소라고 합니다.
 
-    [: The Table Head element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead)
+    ### 폼 요소
 
-    [: The Table Body element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody)
+    폼 요소는 서버에 데이터를 전달하기 위한 요소이며 `<input>`은 대표적인 폼 요소입니다.
+    `<input>`은 내용이 없는 빈 요소이며 type 속성을 통해 여러 종류의 입력 양식으로 나타나게 됩니다.
 
-    [: The Table Foot element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot)
+    ### type="text"
 
-    [: The Table Data Cell element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan)
+    ```html
+    <input type="text" placeholder="아이디">
+    ```
 
-    [: The Table Data Cell element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan)
+    주로 아이디, 비밀번호, 이름, 주소, 전화번호 등 단순한 텍스트를 입력할 때 사용합니다.
+    type="text"에는 placeholder 속성이 존재합니다.
+    placeholder 속성은 사용자가 입력하기 전 미리 화면에 노출하는 값으로 입력하는 값의 양식을 표현할 수 있습니다.
+
+    ### type="password"
+
+    ```html
+    <input type="password">
+    ```
+
+    암호와 같이 공개할 수 없는 내용을 입력할 때 사용합니다.
+    화면에는 type="text'와 같게 나타나지만 실제로 입력할 때 값을 노출하지 않습니다.
+
+    ### type="radio"
+
+    ```html
+    <input type="radio" name="gender"> 남자
+    <input type="radio" name="gender"> 여자
+    ```
+
+    라디오 버튼을 만들 때 사용합니다.
+    라디오 버튼은 중복 선택이 불가능하며 하나의 항목만을 선택해야 합니다.
+
+    ### type="checkbox"
+
+    ```html
+    <input type="checkbox" name="hobby"> 음악감상
+    <input type="checkbox" name="hobby"> 운동
+    <input type="checkbox" name="hobby"> 요리
+    ```
+
+    체크박스를 만들 때 사용합니다.
+    체크박스는 중복 선택이 가능합니다.
+
+    ### name, checked 속성
+
+    라디오 버튼과 체크박스에는 checked, name 속성이 존재합니다.
+    name 속성은 라디오 버튼과 체크박스를 그룹화 시켜주는 속성입니다.
+    checked 속성은 값이 별도로 존재하지 않는 boolean 속성입니다.
+    boolean 속성은 true/false 둘 중 하나의 값을 가지며 속성이 존재하면 true,
+    속성이 존재하지 않으면 false를 가집니다.
+
+    ---
+
+    ### 참고자료
+
+    [: The Input (Form Input) element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
