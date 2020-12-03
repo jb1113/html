@@ -537,10 +537,12 @@
     예를 들어 사용자로부터 텍스트를 입력받거나 아니면 선택을 하게끔 하는 경우가 이에 해당합니다.
     사용자로부터 데이터를 받아야 하는 경우 사용되는 요소들을 폼 요소라고 합니다.
 
-    ### 폼 요소
+    ### 폼(form) 태그
 
-    폼 요소는 서버에 데이터를 전달하기 위한 요소이며 `<input>`은 대표적인 폼 요소입니다.
+    `<form>` 태그는 서버에 데이터를 전달하기 위한 요소이며 `<input>`은 대표적인 폼 요소입니다.
     `<input>`은 내용이 없는 빈 요소이며 type 속성을 통해 여러 종류의 입력 양식으로 나타나게 됩니다.
+
+    ### `<input>` 태그
 
     ### type="text"
 
@@ -589,6 +591,36 @@
     checked 속성은 값이 별도로 존재하지 않는 boolean 속성입니다.
     boolean 속성은 true/false 둘 중 하나의 값을 가지며 속성이 존재하면 true,
     속성이 존재하지 않으면 false를 가집니다.
+
+    ### type="file"
+
+    ```html
+    <input type="file">
+    ```
+
+    파일을 서버로 전송할 때 사용합니다.
+    브라우저에 따라 표현되는 형태는 조금씩 다르지만 모두 같은 역할을 합니다.
+
+    ### type="submit", "reset", "button", "image"
+
+    ```html
+    <form action="./receive.html">
+    	message : <input type="text" name="message"><br>
+    	<input type="submit" value="전송">
+    	<input type="reset" value="취소">
+    	<input type="button" value="등록">
+    	<input type="image" src="./images/login_button" alt="로그인" width="100" height="50">
+    </form>
+    ```
+
+    submit, reset, button, image 타입은 모두 클릭 가능한 버튼을 만듭니다.
+
+    - submit : form에 입력된 값을 서버로 전송합니다.
+    - reset : form에 입력된 값을 초기화 합니다.
+    - button : 아무 기능이 없는 버튼을 생성합니다.
+    - image : 이미지를 삽입할 수 있는 버튼을 생성합니다. (submit과 동일한 동작을 합니다.)
+
+    이미지 버튼은 이미지 관련 속성인 src, alt 속성이 반드시 필요하며 submit 버튼과 동일하게 서버로 값을 전송합니다.
 
     ---
 
