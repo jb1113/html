@@ -566,7 +566,7 @@
     ### type="radio"
 
     ```html
-    <input type="radio" name="gender"> 남자
+    <input type="radio" name="gender" checked> 남자
     <input type="radio" name="gender"> 여자
     ```
 
@@ -577,7 +577,7 @@
 
     ```html
     <input type="checkbox" name="hobby"> 음악감상
-    <input type="checkbox" name="hobby"> 운동
+    <input type="checkbox" name="hobby" checked> 운동
     <input type="checkbox" name="hobby"> 요리
     ```
 
@@ -667,8 +667,126 @@
     각 버튼은 이전에 배웠던 input 태그의 submit, reset, button과 모두 같은 기능을 가진 버튼입니다.
     다만, 빈 태그가 아니며 내용을 안에 직접 넣을 수 있으므로 좀 더 자유로운 스타일 표현이 가능합니다.
 
+    ### `<label>` 태그
+
+    `<label>` 태그는 form 요소의 이름과 form 요소를 명시적으로 연결시켜주기 위해 사용합니다.
+    모든 form 요소에 사용할 수 있습니다.
+
+    ```html
+    <label for="name">닉네임</label>
+    <input type="text" id="name"><br>
+    <label for="password">비밀번호</label>
+    <input type="password" id="password"><br>
+    성별
+    <label for="male">남자</label>
+    <input type="radio" id="male" name="gender" checked>
+    <label for="female">여자</label>
+    <input type="radio" id="female" name="gender">
+    ```
+
+    form 요소의 id 속성값과 `<label>` 태그의 for 속성값을 같게 적어주어야 합니다.
+    `<label>`을 사용하면 이를 클릭했을 경우 해당 form 요소를 클릭한 것처럼 동작합니다.
+    또한, 스크린 리더기를 통해 듣게 되면 해당 form 요소에 접근 시 `<label>`을 함께 읽어주게 됩니다.
+    `<label>`은 사용성, 접근성적인 측면으로 중요한 역할을 하므로 반드시 써주는 것이 좋습니다.
+
+    ### `<fieldset>`, `<legend>` 태그
+
+    `<fieldset>`, `<legend>` 태그는 form 요소를 구조화 하기 위해 필요한 태그입니다.
+
+    - `<fieldset>` : 여러 개의 폼 요소를 그룹화하여 구조적으로 만들기 위해 사용
+    - `<legend>` : 폼 요소의 제목으로 <fieldset> 요소 내부에 작성
+
+    `<fieldset>`은 보통 form의 성격에 따라 구분합니다.
+    `<legend>`는 `<fieldset>`의 자식으로 반드시 최상단에 위치해야 합니다.
+
+    ```html
+    <fieldset>
+    	<legend>기본 정보</legend>
+    	아이디, 비밀번호, 성별 폼 요소
+    	...
+    </fieldset>
+    <fieldset>
+    	<legend>부가 정보</legend>
+    	취미, 지역, 프로필 사진, 지역, 자기소개 폼 요소
+    	...
+    </fieldset>
+    ```
+
+    ### `<form>` 태그
+
+    `<form>` 태그는 form 요소들을 감싸는 태그로 데이터를 묶어서 실제 서버로 전송해주는 역할을 하는 태그입니다.
+    만약 `<fieldset>`으로 구조화되어 있다면 `<fieldset>`도 함께 감싸는 역할을 합니다.
+
+    ```html
+    <form action="./receive" method="post">
+    	<fieldset>
+    		<legend>기본 정보</legend>
+    		...
+    	</fieldset>
+    	<fieldset>
+    		<legend>부가 정보</legend>
+    		...
+    	</fieldset>
+    </form>
+    ```
+
+    `<form>` 태그에는 대표적인 2가지 속성이 있습니다.
+
+    - action : 데이터를 처리하기 위한 서버의 주소
+    - method : 데이터를 전송하는 방식
+
+    method 속성값에는 GET/POST 2가지 방식이 존재합니다.
+    GET 방식은 데이터가 전송될 때 주소창에 파라미터 형태로 붙어 데이터가 노출됩니다.
+    반면, POST 방식은 데이터가 전송될 때 데이터가 노출되지 않습니다.
+
+    ---
+
+    ### 전체 코드
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="ko">
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>form</title>
+    	</head>
+    	<body>
+    		<form action="./receive" method="post">
+    			<h1>Form 관련 요소</h1>
+    			<fieldset>
+    				<legend>기본 정보</legend>
+    					<label for="name">아이디: </label>
+    					<input type="text" id="name" placeholder="영문 아이디를 입력해주세요"><br>
+    					<label for="password">비밀번호: </label>
+    					<input type="password" id="password"><br>
+    					성별: 
+    					<label for="male">남자</label>
+    					<input type="radio" id="male" name="gender" checked>
+    					<label for="female">여자</label>
+    					<input type="radio" id="female" name="gender"><br>
+    			</fieldset>
+    			<fieldset>
+    				<legend>부가 정보</legend>
+    					취미: 
+    					<label for="music">음악감상</label>
+    					<input type="checkbox" id="music" name="hobby">
+    					<label for="exercise">운동</label>
+    					<input type="checkbox" id="exercise" name="hobby" checked>
+    					<label for="cooking">요리</label>
+    					<input type="checkbox" id="cooking" name="hobby"><br>
+    					...
+    			</fieldset>
+    			<button type="submit">전송</button>
+    			<button type="reset">취소</button>
+    		</form>
+    	</body>
+    </html>
+    ```
+
     ---
 
     ### 참고자료
+
+    [](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
 
     [: The Input (Form Input) element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
