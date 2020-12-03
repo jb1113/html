@@ -200,7 +200,7 @@
 
     ---
 
-    ### 참고링크
+    ### 참고자료
 
     [](https://developer.mozilla.org/ko/docs/Web/HTML/Element/a)
 
@@ -375,3 +375,172 @@
     ### 참고링크
 
     [: 이미지 삽입 요소](https://developer.mozilla.org/ko/docs/Web/HTML/Element/img)
+
+- 테이블 요소
+
+    ### 테이블(table) 태그
+
+    `<table>` 태그는 이름에서 느껴지는 바와 같이 데이터를 표로 나타낼 때 사용되는 태그입니다.
+    복잡한 데이터들을 기술할 때 표를 많이 사용합니다.
+
+    ### 표의 구성 요소
+
+    표는 셀(내용이 들어가는 하나의 칸)로 이루어져 있습니다.
+    표의 행(가로 방향)을 row, 열(세로 방향)을 column이라고 합니다.
+
+    - `<table>` : 표를 나타내는 태그
+    - `<tr>` : 행을 나타내는 태그
+    - `<th>` : 제목 셀을 나타내는 태그
+    - `<td>` : 셀을 나타내는 태그
+
+    하나의 `<table>`은 하나 이상의 `<tr>`로 이루어져 있으며,
+    `<tr>`은 셀을 나타내는 `<th>`, `<td>`를 자식으로 가지게 됩니다.
+    표를 구성할 때는 위에서 밑으로, 좌측에서 우측으로 작성하면 됩니다.
+
+    ```html
+    <table>
+    	<tr>
+    		<td>1</td>
+    		<td>2</td>
+    		<td>3</td>
+    		<td>4</td>
+    	</tr>
+    	<tr>
+    		<td>5</td>
+    		<td>6</td>
+    		<td>7</td>
+    		<td>8</td>
+    	</tr>
+    	<tr>
+    		<td>9</td>
+    		<td>10</td>
+    		<td>11</td>
+    		<td>12</td>
+    	</tr>
+    	<tr>
+    		<td>13</td>
+    		<td>14</td>
+    		<td>15</td>
+    		<td>16</td>
+    	</tr>
+    </table>
+    ```
+
+    위는 1부터 16을 표현한 4행 4열의 표를 나타내는 코드입니다.
+    브라우저 화면을 확인해보면 테두리가 없어 표가 어색해 보일 수 있습니다.
+    브라우저에서 제공하는 테이블의 기본 스타일에는 테두리가 없기 때문입니다.
+    확인을 위해 아래의 CSS 코드를 `<head>` 태그 안에 입력하면 테두리가 나타나는 것을 확인할 수 있습니다.
+
+    ```html
+    <head>
+    	<style>
+    		th, td {border: 1px solid;}
+    	</style>
+    </head>
+    ```
+
+    ### 표의 구조와 관련된 태그
+
+    표가 복잡해지면 표를 해석해서 음성으로 전달해야 하는 스크린 리더기와 같은 보조 기기를 통해서는 표의 내용을 이해하는 것이 더욱 어려워질 것입니다.
+    따라서 표를 구조적으로 파악하기 위해 도움이 되는 태그를 사용해야 합니다.
+
+    - `<caption>` : 표의 제목을 나타내는 태그
+    - `<thead>` : 제목 행을 그룹화하는 태그
+    - `<tbody>` : 본문 행을 그룹화하는 태그
+    - `<tfoot>` : 바닥 행을 그룹화하는 태그
+
+    ```html
+    <table>
+    	<caption>Monthly Savings</caption>
+    	<thead>
+    		<tr>
+    			<th>Month</th>
+    			<th>Savings</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>January</td>
+    			<td>$100</td>
+    		</tr>
+    		<tr>
+    			<td>February</td>
+    			<td>$80</td>
+    		</tr>
+    	</tbody>
+    	<tfoot>
+    		<tr>
+    			<td>Sum</td>
+    			<td>$180</td>
+    		</tr>
+    	</tfoot>
+    </table>
+    ```
+
+    `<tfoot>`은 `<thead>` 다음에 있지만 실제 화면에서는 표의 맨 아래에 위치하게 된다는 점을 주의해야 합니다.
+
+    * HTML 버전에 따라  `<tfoot>`의 위치가 변경되었습니다.
+
+    - HTML4 : `<tfoot>` 위치가 `<tbody>` 전에 위치합니다. 이유는 데이터의 양이 (`<tbody>`) 잠재적으로 매우 클수도 있기 때문에 그 전에 `<tfoot>`을 렌더해야 했기 때문입니다.
+    - HTML5 : `<tfoot>`의 위치가 `<tbody>` 앞에 와도 되고, 뒤에 와도 상관없습니다.
+    - **HTML5.1 ~ 현재(5.2) : `<tfoot>`이 `<tbody>` 뒤에 위치해야 합니다. `<tfoot>`의 위치가 `<tbody>` 앞에 나올 경우 웹 접근성의 키보드의 초점 이동 순서 항목에 문제가 있기 때문에 변경되었습니다.**
+
+    ### 셀 병합
+
+    테이블 관련 속성으로 셀을 병합하는 속성이 있습니다.
+    셀을 가로 방향으로 병합할 건지 아니면 세로 방향으로 병합할 건지에 따라서 colspan, rowspan 속성을 사용합니다.
+    속성 값에는 병합할 셀의 개수를 적어주시면 됩니다.
+
+    - colspan : 셀을 가로 방향으로 병합
+    - rowspan : 셀을 세로 방향으로 병합
+
+    ```html
+    <table>
+    	<caption>Monthly Savings</caption>
+    	<thead>
+    		<tr><th>Month</th><th>Savings</th></tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>January</td>
+    			<td>%100</td>
+    		</tr>
+    		<tr>
+    			<td>February</td>
+    			<td rowspan="2">$80</td>
+    		</tr>
+    		<tr>
+    			<td>March</td>
+    		</tr>
+    	</tbody>
+    	<tfoot>
+    		<tr>
+    			<td colspan="2">Sum</td>
+    		</tr>
+    	</tfoot>
+    </table>
+    ```
+
+    ---
+
+    ### 참고링크
+
+    [: The Table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
+
+    [: The Table Row element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr)
+
+    [: The Table Data Cell element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td)
+
+    [](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th)
+
+    [: The Table Caption element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption)
+
+    [: The Table Head element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/thead)
+
+    [: The Table Body element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody)
+
+    [: The Table Foot element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tfoot)
+
+    [: The Table Data Cell element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan)
+
+    [: The Table Data Cell element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan)
