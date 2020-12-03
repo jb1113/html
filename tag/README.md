@@ -240,3 +240,78 @@
     [: The Content Division element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
 
     [](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
+
+- 리스트 요소
+
+    ### 리스트를 표현하는 태그
+
+    리스트는 일련된 항목들이 나열된 것들을 의미합니다.
+    콘텐츠가 많은 포털이나 검색 엔진같은 사이트에는 분야나 항목으로 구분할 것이 많으므로 리스트가 자주 사용됩니다.
+
+    ### `<ul>` 태그
+
+    ul(unordered list) 태그는 순서가 없는 리스트를 표현할 때 사용합니다.
+
+    ```html
+    콩나물국 재료
+    <ul>
+    	<li>콩나물</li>
+    	<li>파</li>
+    	<li>국 간장</li>
+    </ul>
+    ```
+
+    콩나물국에 들어가는 일부 재료들을 나열한 리스트입니다.
+    각 재료는 나오는 순서가 바뀌어도 상관이 없으므로 순서가 없는 리스트로 표현할 수 있습니다.
+    `<ul>` 태그를 선언한 후 그 아래 각각의 항목들, 재료들을 리스트라는 `<li>` 태그를 이용하여 각 항목을 나타냅니다.
+
+    ### `<ol>` 태그
+
+    ol(ordered list) 태그는 순서가 있는 리스트를 표현할 때 사용합니다.
+
+    ```html
+    콩나물국 레시피
+    <ol>
+    	<li>냄비에 국물용 멸치를 넣고 한소끔 끓여 멸치 육수를 7컵(1,400ml) 만든다.</li>
+    	<li>콩나물을 넣고 뚜껑을 덮어 콩나물이 익을 때까지 끓인다.</li>
+    	<li>뚜껑을 열고 대파, 마늘, 고춧가루를 넣고 끓인다.</li>
+    </ol>
+    ```
+
+    콩나물국을 끓이는 순서를 나열한 리스트입니다.
+    이 순서는 서로 바뀌면 안되기 때문에 순서가 있는 리스트를 사용해야 합니다.
+    `<ol>` 태그를 선언한 후 그 안에서 `<li>` 태그를 사용해 각 항목을 나타냅니다.
+
+    ### `<dl>`태그
+
+    dl(definition/description list) 태그는 용어와 그에 대한 정의를 표현할 때 사용합니다.
+    `<dl>` 태그는 앞서 배운 `<ul>`, `<ol>` 태그와는 구조가 조금 다릅니다.
+    `<ul>`, `<ol>`은 항목을 단순히 나열하는 구조지만,
+    `<dl>`은 용어와 설명이 하나의 세트로 항목을 이루고 하나 이상의 항목으로 리스트가 이루어지는 구조입니다.
+
+    ```html
+    <dl>
+    	<dt>HTML</dt>
+    	<dd>The language for building web pages</dd>
+    	<dd>HTML is the standard markup language for Web pages</dd>
+    	<dt>CSS</dt>
+    	<dd>The language for styling web pages</dd>
+    	<dt>JavaScript</dt>
+    	<dd>The language for programming web pages</dd>
+    </dl>
+    ```
+
+    - `<dt>` : 용어를 나타내는 태그
+    - `<dd>` : 용어에 대한 정의 또는 설명을 나타내는 태그
+
+    용어 하나에 여러 정의가 들어갈 때에는 `<dd>` 태그를 한 개 이상 쓰는 것이 가능합니다.
+
+    ---
+
+    ### 참고자료
+
+    [: The Unordered List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
+
+    [: The Ordered List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
+
+    [: The Description List element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
