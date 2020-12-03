@@ -622,6 +622,51 @@
 
     이미지 버튼은 이미지 관련 속성인 src, alt 속성이 반드시 필요하며 submit 버튼과 동일하게 서버로 값을 전송합니다.
 
+    ### `<SELECT>` 태그
+
+    `<select>` 태그는 선택 목록 상자 또는 콤보박스라고도 합니다.
+    몇 개의 선택지를 리스트 형태로 노출하고 그 중 하나를 선택할 수 있게 하는 태그입니다. (multiple 속성을 사용하면 다중 선택도 가능합니다.)
+
+    ```html
+    <select>
+    	<option>서울</option>
+    	<option selected>인천</option>
+    	<option>경기</option>
+    	...
+    </select>
+    ```
+
+    `<select>` 내부에 `<option>`으로 각 항목을 나타냅니다.
+    `<option>`의 속성으로는 selected가 있으며 이는 선택된 항목을 의미합니다.
+
+    ### `<textarea>` 태그
+
+    한 줄만을 입력할 수 있는 `<input type="text">`와 달리 여러 줄의 텍스트를 입력할 때 사용합니다.
+
+    ```html
+    <textarea rows="5" cols="100">
+    ...
+    </textarea>
+    ```
+
+    `<textarea>` 태그에는 텍스트 상자의 크기를 조절하는 rows, cols 속성이 있습니다.
+
+    - cols : 가로 크기를 조절하는 속성 (한 줄에 들어가는 글자의 수, 수치의 의미는 평균적인 글자의 너비로 정확히 글자 수를 나타내지는 않습니다.)
+    - rows : 세로 크기를 조절하는 속성 (화면에 보여지는 줄 수)
+
+    ### `<button>` 태그
+
+    버튼을 만들 때 사용하며 submit, reset, button 3가지의 타입이 있습니다.
+
+    ```html
+    <button type="submit">전송</button>
+    <button type="reset">취소</button>
+    <button type="button">등록</button>
+    ```
+
+    각 버튼은 이전에 배웠던 input 태그의 submit, reset, button과 모두 같은 기능을 가진 버튼입니다.
+    다만, 빈 태그가 아니며 내용을 안에 직접 넣을 수 있으므로 좀 더 자유로운 스타일 표현이 가능합니다.
+
     ---
 
     ### 참고자료
