@@ -148,17 +148,17 @@
 
     HTML5에서 새로 생긴 Semantic 요소들입니다.
 
-    - <article>
-    - <aside>
-    - <figcaption>
-    - <figure>
-    - <footer>
-    - <header>
-    - <main>
-    - <mark>
-    - <nav>
-    - <section>
-    - <time>
+    - `<article>`
+    - `<aside>`
+    - `<figcaption>`
+    - `<figure>`
+    - `<footer>`
+    - `<header>`
+    - `<main>`
+    - `<mark>`
+    - `<nav>`
+    - `<section>`
+    - `<time>`
 
     ---
 
