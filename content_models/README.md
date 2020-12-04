@@ -1,4 +1,4 @@
-# 콘텐츠모델
+# 콘텐츠 모델
 
 ![https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png](https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png)
 
@@ -41,7 +41,7 @@ Heading에는 각 section의 header를 정의하는 heading 태그가 포함됩�
 
 ### 5. Phrasing
 
-`a, abbr, map>area, audio, b, bdo, br, button, canvas, cite, code, datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen, label, map, mark, math, meter, noscript, object, output, progress, q, ruby, samp, script, select, small, span, strong, sub, sup, svg, textarea, time, var, video, wbr`
+'a, abbr, map>area, audio, b, bdo, br, button, canvas, cite, code, datalist, del, dfn, em, embed, i, iframe, img, input, ins, kbd, keygen, label, map, mark, math, meter, noscript, object, output, progress, q, ruby, samp, script, select, small, span, strong, sub, sup, svg, textarea, time, var, video, wbr'
 
 Phrasing에는 문서의 텍스트 또는 텍스트를 꾸며주는 문단 내부 레벨로 사용되는 요소들이 포함됩니다.
 
