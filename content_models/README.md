@@ -1,6 +1,6 @@
 # 콘텐츠 모델
 
-![https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png](https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png)
+![content categories](../content_categories.png)
 
 ### Content Models의 7분류
 
