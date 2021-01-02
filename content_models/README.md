@@ -2,6 +2,8 @@
 
 ![content categories](../content_categories.png)
 
+> 출처 [https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories)
+
 ### Content Models의 7분류
 
 1. Metadata Content
